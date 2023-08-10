@@ -31,43 +31,28 @@ const SummaryCard = () => {
   return (
     <div className="summary-card">
       <h3>Summary</h3>
-      <div className="category reaction">
-        <div className="category-wrapper">
-          <img src="icon-reaction.svg" alt="" className="icon" />
-          <h4>Reaction</h4>
-        </div>
-        <p className="score">
-          <span className="darken">80</span> / 100
-        </p>
-      </div>
-      <div className="category memory">
-        <div className="category-wrapper">
-          <img src="icon-memory.svg" alt="" className="icon" />
-          <h4>Memory</h4>
-        </div>
-        <p className="score">
-          <span className="darken">92</span> / 100
-        </p>
-      </div>
-      <div className="category verbal">
-        <div className="category-wrapper">
-          <img src="icon-verbal.svg" alt="" className="icon" />
-          <h4>Verbal</h4>
-        </div>
-        <p className="score">
-          <span className="darken">61</span> / 100
-        </p>
-      </div>
-      <div className="category visual">
-        <div className="category-wrapper">
-          <img src="icon-visual.svg" alt="" className="icon" />
-          <h4>Visual</h4>
-        </div>
-        <p className="score">
-          <span className="darken">72</span> / 100
-        </p>
-      </div>
+      <Score
+        class="reaction"
+        category="Reaction"
+        score={80}
+        icon="icon-reaction.svg"
+      />
       <button className="btn-continue">Continue</button>
+    </div>
+  );
+};
+
+const Score = (props) => {
+  // console.log(props);
+  return (
+    <div className={props.class}>
+      <div className="category-wrapper">
+        <img src={props.icon} alt="" className="icon" />
+        <h4>{props.category}</h4>
+      </div>
+      <p className="score">
+        <span className="darken">{props.score}</span> / 100
+      </p>
     </div>
   );
 };

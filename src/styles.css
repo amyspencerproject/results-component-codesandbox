@@ -197,10 +197,6 @@ h4 {
 }
 
 .category {
-  display: flex;
-  justify-content: space-between;
-  border-radius: 12px;
-  padding: 1rem;
 }
 
 .category-wrapper {
@@ -213,21 +209,37 @@ h4 {
 .reaction {
   color: var(--light-red);
   background-color: var(--pale-light-red);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 12px;
+  padding: 1rem;
 }
 
 .memory {
   color: var(--orange-yellow);
   background-color: var(--pale-orange-yellow);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 12px;
+  padding: 1rem;
 }
 
 .verbal {
   color: var(--green-teal);
   background-color: var(--pale-green-teal);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 12px;
+  padding: 1rem;
 }
 
 .visual {
   color: var(--cobalt-blue);
   background-color: var(--pale-cobalt-blue);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 12px;
+  padding: 1rem;
 }
 
 .score {
