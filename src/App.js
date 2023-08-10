@@ -1,5 +1,7 @@
 import "./styles.css";
 
+import data from "./data.json";
+
 export default function App() {
   return (
     <div className="App">
@@ -31,27 +33,24 @@ const SummaryCard = () => {
   return (
     <div className="summary-card">
       <h3>Summary</h3>
-      <Score
-        class="reaction"
-        category="Reaction"
-        score={80}
-        icon="icon-reaction.svg"
-      />
+      {data.map((category) => (
+        <Score categoryObject={category} key={category.id} />
+      ))}
+
       <button className="btn-continue">Continue</button>
     </div>
   );
 };
 
 const Score = (props) => {
-  // console.log(props);
   return (
-    <div className={props.class}>
+    <div className={props.categoryObject.class}>
       <div className="category-wrapper">
-        <img src={props.icon} alt="" className="icon" />
-        <h4>{props.category}</h4>
+        <img src={props.categoryObject.icon} alt="" className="icon" />
+        <h4>{props.categoryObject.category}</h4>
       </div>
       <p className="score">
-        <span className="darken">{props.score}</span> / 100
+        <span className="darken">{props.categoryObject.score}</span> / 100
       </p>
     </div>
   );
