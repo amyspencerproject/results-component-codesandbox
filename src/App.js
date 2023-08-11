@@ -42,15 +42,15 @@ const SummaryCard = () => {
   );
 };
 
-const Score = (props) => {
+const Score = ({ categoryObject }) => {
   return (
-    <div className={props.categoryObject.class}>
+    <div className={`category ${categoryObject.class}`}>
       <div className="category-wrapper">
-        <img src={props.categoryObject.icon} alt="" className="icon" />
-        <h4>{props.categoryObject.category}</h4>
+        <img src={categoryObject.icon} alt="" className="icon" />
+        <h4>{categoryObject.category}</h4>
       </div>
       <p className="score">
-        <span className="darken">{props.categoryObject.score}</span> / 100
+        <span className="darken">{categoryObject.score}</span> / 100
       </p>
     </div>
   );
