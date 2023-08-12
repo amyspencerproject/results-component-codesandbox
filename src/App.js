@@ -5,8 +5,10 @@ import data from "./data.json";
 export default function App() {
   return (
     <div className="App">
-      <ResultCard />
-      <SummaryCard />
+      <main>
+        <ResultCard />
+        <SummaryCard />
+      </main>
       <Footer />
     </div>
   );

@@ -111,8 +111,19 @@ body {
   background-color: var(--pale-blue);
 }
 
+.App {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 1.125rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pale-blue);
+}
+
 main {
   background-color: var(--white);
+  border-radius: 32px;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
